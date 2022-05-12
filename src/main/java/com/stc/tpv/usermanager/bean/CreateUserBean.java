@@ -55,7 +55,7 @@ public class CreateUserBean {
             return;
         }
 
-
+        this.service.saveUser(this.user);
 
         this.user = new UserDTO();
     }
