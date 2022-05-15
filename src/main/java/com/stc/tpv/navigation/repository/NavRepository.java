@@ -26,6 +26,11 @@ public class NavRepository {
         panelList.add(menuHome);
         PanelService menuTable = new PanelService("Tables", "z-icon-flag-o");
         panelList.add(menuTable);
+        // kevin borge
+        PanelService menuP = new PanelService("create-provider", "~./create-provider.zul");
+        panelList.add(menuP);
+        PanelService tableProviders = new PanelService("load-table", "~./table-providers.zul" );
+        panelList.add(tableProviders);
 
         PanelService menuC = new PanelService("Contact", "z-icon-envelope-o");
 //        menuC.setCounter(Util.nextInt(1, 10));
@@ -34,7 +39,9 @@ public class NavRepository {
         panelList.add(menuF);
         PanelService menuL = new PanelService("Logout", "z-icon-power-off");
         panelList.add(menuL);
+
     }
+
 
     static public List<PanelService> queryMenu(){
         return panelList;

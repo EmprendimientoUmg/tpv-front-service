@@ -1,21 +1,13 @@
 <zk>
-    <button label="" iconSclass="z-icon-home" style="border-radius: revert; background: steelblue !important;"/>
-    <label value="STC-WMS" style="
-    width: 15%;
-    margin-top: 9px;
-    margin-left: 8px;
-    font-size: 20px;
-    color: steelblue;
-    font-weight: bold;"/>
-    <tabbox width="100%" sclass="nav_tabs" style="border:none" viewModel="@id('vm') @init('com.stc.tpv.navigation.bean.NavbarBean')">
-<!--        <tabs id="tabs" style="background: #ffffff;">-->
-<!--            <tab label="Home" onClick="@command('chanceInternalPage', service='home')" onSelect="" style="background: #ffffff;"/>-->
-<!--            <tab label="${labels.mn.admin}" onSelect="updatePanelAdmin()" onClick="@command('selectedPanel', panel='admin-user')" style="background: #ffffff;"/>-->
-<!--            <tab label="Compras" onSelect="updateCategory(self.label)" style="background: #ffffff;"/>-->
-<!--            <tab label="Ventas" onSelect="updateCategory(self.label)" style="background: #ffffff;"/>-->
-<!--            <tab label="Caja" onSelect="updateCategory(self.label)" style="background: #ffffff;"/>-->
-<!--        </tabs>-->
-        <toolbar sclass="nav_toolbar" style="background: #ffffff;">
+    <tabbox width="100%" sclass="nav_tabs" viewModel="@id('vm') @init('com.stc.tpv.navigation.bean.NavbarBean')">
+        <tabs id="tabs" style="background: #38AFDF;">
+            <tab label="Home" onClick="@command('chanceInternalPage', service='home')" onSelect="" style="background: #38AFDF;"/>
+            <tab label="${labels.mn.admin}" onSelect="updatePanelAdmin()" onClick="@command('selectedPanel', panel='admin-user')" style="background: #38AFDF;"/>
+            <tab label="Compras" onSelect="updateCategory(self.label)" style="background: #38AFDF;"/>
+            <tab label="Ventas" onSelect="updateCategory(self.label)" style="background: #38AFDF;"/>
+            <tab label="Caja" onSelect="updateCategory(self.label)" style="background: #38AFDF;"/>
+        </tabs>
+        <toolbar sclass="nav_toolbar" style="background: #38AFDF;">
             <toolbarbutton target="_zkdemo" style="color: #3a92c8;"
                            iconSclass="z-icon-twitter-square" href="http://twitter.com/zkoss" />
             <toolbarbutton target="_zkdemo" style="color: #3b5998;"
