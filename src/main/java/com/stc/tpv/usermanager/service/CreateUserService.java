@@ -3,6 +3,8 @@ package com.stc.tpv.usermanager.service;
 import com.stc.tpv.usermanager.controller.CreateUserController;
 import com.stc.tpv.usermanager.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +15,8 @@ import org.springframework.stereotype.Service;
  *
  * @author job
  */
-@Service
+@Service("createUserService")
+@Scope(value = "singleton",proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class CreateUserService {
 
     private final CreateUserController controller;

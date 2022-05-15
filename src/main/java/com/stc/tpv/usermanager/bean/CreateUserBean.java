@@ -25,7 +25,7 @@ public class CreateUserBean {
     private UserDTO user;
     private String errorMessage;
 
-    @WireVariable
+    @WireVariable("createUserService")
     private  CreateUserService service;
 
     @Init
