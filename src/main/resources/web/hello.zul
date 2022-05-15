@@ -1,7 +1,0 @@
-<zk>
-    <window title="Hola desde  ZK - Spring Boot!" border="normal">
-        You are using ZK version <label value="${session.webApp.version}"/>
-        <textbox/>
-        <button>clickme</button>
-    </window>
-</zk>

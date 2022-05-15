@@ -1,13 +1,21 @@
 <zk>
-    <tabbox width="100%" sclass="nav_tabs" viewModel="@id('vm') @init('com.stc.tpv.navigation.bean.NavbarBean')">
-        <tabs id="tabs" style="background: #38AFDF;">
-            <tab label="Home" onClick="@command('chanceInternalPage', service='home')" onSelect="" style="background: #38AFDF;"/>
-            <tab label="${labels.mn.admin}" onSelect="updatePanelAdmin()" onClick="@command('selectedPanel', panel='admin-user')" style="background: #38AFDF;"/>
-            <tab label="Compras" onSelect="updateCategory(self.label)" style="background: #38AFDF;"/>
-            <tab label="Ventas" onSelect="updateCategory(self.label)" style="background: #38AFDF;"/>
-            <tab label="Caja" onSelect="updateCategory(self.label)" style="background: #38AFDF;"/>
-        </tabs>
-        <toolbar sclass="nav_toolbar" style="background: #38AFDF;">
+    <button label="" iconSclass="z-icon-home" style="border-radius: revert; background: steelblue !important;"/>
+    <label value="STC-WMS" style="
+    width: 15%;
+    margin-top: 9px;
+    margin-left: 8px;
+    font-size: 20px;
+    color: steelblue;
+    font-weight: bold;"/>
+    <tabbox width="100%" sclass="nav_tabs" style="border:none" viewModel="@id('vm') @init('com.stc.tpv.navigation.bean.NavbarBean')">
+<!--        <tabs id="tabs" style="background: #ffffff;">-->
+<!--            <tab label="Home" onClick="@command('chanceInternalPage', service='home')" onSelect="" style="background: #ffffff;"/>-->
+<!--            <tab label="${labels.mn.admin}" onSelect="updatePanelAdmin()" onClick="@command('selectedPanel', panel='admin-user')" style="background: #ffffff;"/>-->
+<!--            <tab label="Compras" onSelect="updateCategory(self.label)" style="background: #ffffff;"/>-->
+<!--            <tab label="Ventas" onSelect="updateCategory(self.label)" style="background: #ffffff;"/>-->
+<!--            <tab label="Caja" onSelect="updateCategory(self.label)" style="background: #ffffff;"/>-->
+<!--        </tabs>-->
+        <toolbar sclass="nav_toolbar" style="background: #ffffff;">
             <toolbarbutton target="_zkdemo" style="color: #3a92c8;"
                            iconSclass="z-icon-twitter-square" href="http://twitter.com/zkoss" />
             <toolbarbutton target="_zkdemo" style="color: #3b5998;"
@@ -15,39 +23,39 @@
             <toolbarbutton target="_zkdemo" style="color: #696569;"
                            iconSclass="z-icon-github-square" href="https://github.com/zkoss/" />
         </toolbar>
-        <tabpanels>
-            <tabpanel visible="false"/>
-            <tabpanel id = "tp_admin"  visible="@load(vm.currentPage.enable)" >
-                <toolbar hflex="true" >
-                    <toolbarbutton label="${labels.admin.user}"   onClick="@command('chanceInternalPage', service='admin-user')" />
-                    <toolbarbutton label="${labels.change.pwd}" onClick="@command('chanceInternalPage', service='change-pwd')" />
-                    <toolbarbutton label="${labels.data.business}" onClick="@command('chanceInternalPage', service='data-bsn')" />
-                </toolbar>
-            </tabpanel>
-            <tabpanel>
-                <toolbar hflex="true">
-                    <toolbarbutton label="Proveedores" onClick="updateSubPage(self.label)" />
-                    <toolbarbutton label="Orden de compra" onClick="updateSubPage(self.label)" />
-                    <toolbarbutton label="Recpción de Productos" onClick="updateSubPage(self.label)" />
-                </toolbar>
-            </tabpanel>
-            <tabpanel>
-                <toolbar hflex="true">
-                    <toolbarbutton label="Documentation 1" onClick="updateSubPage(self.label)" />
-                    <toolbarbutton label="Documentation 2" onClick="updateSubPage(self.label)" />
-                    <toolbarbutton label="Documentation 3" onClick="updateSubPage(self.label)" />
-                    <toolbarbutton label="Documentation 4" onClick="updateSubPage(self.label)" />
-                    <toolbarbutton label="Documentation 5" onClick="updateSubPage(self.label)" />
-                </toolbar>
-            </tabpanel>
-            <tabpanel>
-                <toolbar hflex="true">
-                    <toolbarbutton label="Caja" onClick="updateSubPage(self.label)"/>
-                </toolbar>
-            </tabpanel>
-        </tabpanels>
+<!--        <tabpanels>-->
+<!--            <tabpanel visible="false"/>-->
+<!--            <tabpanel id = "tp_admin"  visible="@load(vm.currentPage.enable)" >-->
+<!--                <toolbar hflex="true" >-->
+<!--                    <toolbarbutton label="${labels.admin.user}"   onClick="@command('chanceInternalPage', service='admin-user')" />-->
+<!--                    <toolbarbutton label="${labels.change.pwd}" onClick="@command('chanceInternalPage', service='change-pwd')" />-->
+<!--                    <toolbarbutton label="${labels.data.business}" onClick="@command('chanceInternalPage', service='data-bsn')" />-->
+<!--                </toolbar>-->
+<!--            </tabpanel>-->
+<!--            <tabpanel>-->
+<!--                <toolbar hflex="true">-->
+<!--                    <toolbarbutton label="Proveedores" onClick="updateSubPage(self.label)" />-->
+<!--                    <toolbarbutton label="Orden de compra" onClick="updateSubPage(self.label)" />-->
+<!--                    <toolbarbutton label="Recpción de Productos" onClick="updateSubPage(self.label)" />-->
+<!--                </toolbar>-->
+<!--            </tabpanel>-->
+<!--            <tabpanel>-->
+<!--                <toolbar hflex="true">-->
+<!--                    <toolbarbutton label="Documentation 1" onClick="updateSubPage(self.label)" />-->
+<!--                    <toolbarbutton label="Documentation 2" onClick="updateSubPage(self.label)" />-->
+<!--                    <toolbarbutton label="Documentation 3" onClick="updateSubPage(self.label)" />-->
+<!--                    <toolbarbutton label="Documentation 4" onClick="updateSubPage(self.label)" />-->
+<!--                    <toolbarbutton label="Documentation 5" onClick="updateSubPage(self.label)" />-->
+<!--                </toolbar>-->
+<!--            </tabpanel>-->
+<!--            <tabpanel>-->
+<!--                <toolbar hflex="true">-->
+<!--                    <toolbarbutton label="Caja" onClick="updateSubPage(self.label)"/>-->
+<!--                </toolbar>-->
+<!--            </tabpanel>-->
+<!--        </tabpanels>-->
     </tabbox>
-    <separator height="30px"></separator>
+<!--    <separator height="30px"></separator>-->
     <zscript><![CDATA[
         void updateCategory(String category) {
             current_category.setValue(category);
@@ -65,4 +73,5 @@
 <!--        <label sclass="nav_text">-</label>-->
 <!--        <label id="current_subpage" sclass="nav_text">Index</label>-->
 <!--    </hlayout>-->
+
 </zk>

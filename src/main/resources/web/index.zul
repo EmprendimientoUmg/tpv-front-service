@@ -4,9 +4,16 @@
 <?link rel="stylesheet" href="resources/css/zk-bootstrap.css" ?>
 <zk>
     <vlayout viewModel="@id('vm')@init('com.stc.tpv.navigation.bean.MainBean')" width="100%" height="100%">
-        <include  src="~./navbar.zul"  style="width: 100%;"/>
-        <div id = "dvContent" sclass="container-fluid" hflex="1" style="width: 70%">
-            <include src="@load(vm.navigationModel.contentUrl)"/>
-        </div>
+        <include src="~./navbar.zul" style="width: 100%; display: inline-flex; border:1px;"/>
+        <hlayout style="width:100%;">
+            <div style="width:100%;">
+                <include src="~./sidebar.zul"/>
+            </div>
+            <div style="width:50%;">
+                <div id="dvContent" sclass="container-fluid" hflex="1" style="width: 70%">
+                    <include src="@load(vm.navigationModel.contentUrl)"/>
+                </div>
+            </div>
+        </hlayout>
     </vlayout>
 </zk>
