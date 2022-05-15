@@ -26,7 +26,8 @@
             </tabpanel>
             <tabpanel>
                 <toolbar hflex="true">
-                    <toolbarbutton label="Proveedores" onClick="updateSubPage(self.label)" />
+                    <toolbarbutton label=" Proveedores" onClick="@command('chanceInternalPage', service='create-provider')"/>
+                    <toolbarbutton label=" Lista de proveedores" onClick="@command('chanceInternalPage', service='load-table')"  />
                     <toolbarbutton label="Orden de compra" onClick="updateSubPage(self.label)" />
                     <toolbarbutton label="Recpción de Productos" onClick="updateSubPage(self.label)" />
                 </toolbar>
@@ -42,7 +43,7 @@
             </tabpanel>
             <tabpanel>
                 <toolbar hflex="true">
-                    <toolbarbutton label="Caja" onClick="updateSubPage(self.label)"/>
+                    <toolbarbutton label="Caja" onClick="updateSubPage(self.label)"/>55555555555555555
                 </toolbar>
             </tabpanel>
         </tabpanels>

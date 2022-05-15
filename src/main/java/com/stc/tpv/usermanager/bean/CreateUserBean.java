@@ -50,7 +50,7 @@ public class CreateUserBean {
             return;
         }
         if (this.user.getPassword() == null || this.user.getPassword().isEmpty()){
-            log.info("El passwor  no puede estar vacio");
+            log.info("El password  no puede estar vacio");
             setErrorMessage("password No valido");
             return;
         }
